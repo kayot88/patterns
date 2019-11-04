@@ -1,9 +1,19 @@
 import React from 'react';
 
-import CounterContainer from './components/CounterContainer';
+import Counter from './components/Counter';
 
 export default class App extends React.Component {
-    render() {
-        return <CounterContainer />;
-    }
+  render() {
+    return (
+      <Counter
+        render={({ count, increment, decrement }) => (
+          <div className="counter">
+            <button onClick={decrement}>-</button>
+            <span>{count}</span>
+            <button onClick={increment}>+</button>
+          </div>
+        )}
+      />
+    );
+  }
 }
