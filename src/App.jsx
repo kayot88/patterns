@@ -1,28 +1,26 @@
 import React from 'react';
-import Counter from './components/Counter';
+import Tabs from './components/Tabs/index';
 
 export default class App extends React.Component {
-  sendAnalitics = () => {
-    return console.log('Clicked');
-  };
   render() {
     return (
-      <Counter
-        className="counter"
-        render={({ className, getCounterProps }) => {
-          const counterProps = getCounterProps({
-            onClick: this.sendAnalitics,
-            map: count => count * 2
-          });
-          return (
-            <div className={className}>
-              <button onClick={counterProps.decrement}>-</button>
-              <span>{counterProps.count}</span>
-              <button onClick={counterProps.increment}>+</button>
-            </div>
-          );
-        }}
-      />
+      <Tabs>
+        <Tabs.Tab title="Tab 1">
+          L1orem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus
+          omnis, quasi nisi architecto harum fugit dolorem delectus commodi
+          quidem porro?
+        </Tabs.Tab>
+        <Tabs.Tab title="Tab 2">
+         2 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus
+          omnis, quasi nisi architecto harum fugit dolorem delectus commodi
+          quidem porro?
+        </Tabs.Tab>
+        <Tabs.Tab title="Tab 3">
+         3 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus
+          omnis, quasi nisi architecto harum fugit dolorem delectus commodi
+          quidem porro?
+        </Tabs.Tab>
+      </Tabs>
     );
   }
 }

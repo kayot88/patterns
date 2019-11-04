@@ -1,13 +1,30 @@
-.counter {
+/* .tabs {
     display: flex;
     align-items: center;
-}
 
-.counter span {
+}
+.tab1 .tab2 .tab3{
+    min-height: 100px;
+}
+*{
+    visibility: visible;
+    height: auto;
+    width: auto;
+} */
+
+/* nav{
+    display: inline-block; */
+    /* min-height: 100px;
+    min-width: 100px;
+} */
+
+
+/* .counter span {
     width: 48px;
     text-align: center;
     font-size: 2rem;
 }
+
 
 .counter button {
     border-radius: 100%;
@@ -21,4 +38,8 @@
 
 .counter button:hover {
     background-color: lightgray;
-}
+} */
+
+/* .active{
+    visibility: visible;
+} */
