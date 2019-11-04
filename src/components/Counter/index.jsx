@@ -15,10 +15,18 @@ class Counter extends React.Component {
       className: `${this.state.count > 0 ? 'started' : 'not-started'} ${
         this.props.className
       }`,
-      counterProps: {
-        count: this.state.count,
-        increment: this.increment,
-        decrement: this.decrement
+      getCounterProps: ({onClick, map}) => {
+        return {
+          count: map(this.state.count),
+          increment: () => {
+            this.increment();
+            onClick();
+          },
+          decrement: () => {
+            this.decrement();
+            onClick();
+          }
+        };
       }
     });
   }
