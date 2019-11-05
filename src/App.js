@@ -7,13 +7,14 @@ export default class App extends React.Component {
     count: 0
   };
 
-  handleChange = count => this.setState(() => ({ count }));
-
   render() {
     return (
       <React.Fragment>
-        <Counter onChange={this.handleChange} />
-        <Counter count={this.state.count} onChange={this.handleChange} />
+        <Counter
+          count={this.state.count}
+          upCount={() => this.setState(state => ({ count: this.state.count + 1 }))}
+          downCount={() => this.setState(state => ({ count: this.state.count - 1 }))}
+        />
       </React.Fragment>
     );
   }
