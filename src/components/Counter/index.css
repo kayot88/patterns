@@ -19,7 +19,7 @@
 } */
 
 
-/* .counter span {
+.counter span {
     width: 48px;
     text-align: center;
     font-size: 2rem;
@@ -38,7 +38,7 @@
 
 .counter button:hover {
     background-color: lightgray;
-} */
+}
 
 /* .active{
     visibility: visible;
